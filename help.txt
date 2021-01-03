@@ -1,0 +1,14 @@
+Thank you for sharing anonymous usage data. Would you change your mind, the following
+command will disable this feature entirely:
+
+    ng analytics project off
+
+
+ng add @angular/material
+
+
+npm install --save @angular/material @angular/cdk @angular/animations hammerjs
+
+https://appdividend.com/2018/12/08/angular-7-observables-tutorial-with-example/
+send msgs
+https://jasonwatmore.com/post/2020/07/06/angular-10-communicating-between-components-with-observable-subject

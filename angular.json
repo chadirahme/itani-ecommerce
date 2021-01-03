@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/styles.css"
             ],
             "scripts": []
           },
@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "itani-ecommerce"
+  "defaultProject": "itani-ecommerce",
+  "cli": {
+    "analytics": "fa8d7d22-c56f-4960-8dfc-62072dbbdc72"
+  }
 }
