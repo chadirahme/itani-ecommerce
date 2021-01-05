@@ -1,0 +1,37 @@
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row{
+  padding: 0 0px;
+  padding-right: 10px;
+}
+
+.flexExpand {
+  flex: 1 1 auto;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+
+/*.mat-toolbar {*/
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*z-index: 1;*/
+/*}*/
+
+/*.app-pheader {*/
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  /*align-items: center;*/
+  /*padding: 8px 16px;*/
+/*}*/
+

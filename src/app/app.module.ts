@@ -9,6 +9,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import {ElishCustomMaterialModule} from "./shared/custom.material.module";
 import { SettingsComponent } from './settings/settings.component';
 import {HttpClientModule} from "@angular/common/http";
+import { HomeComponent } from './home/home.component';
+import {NgImageSliderModule} from "ng-image-slider";
+import {PheaderComponent} from "./shared/pheader/pheader.component";
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import {HttpClientModule} from "@angular/common/http";
     HeaderComponent,
     AboutusComponent,
     FooterComponent,
-    SettingsComponent
+    SettingsComponent,
+    PheaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     ElishCustomMaterialModule,
+    NgImageSliderModule,
     AppRoutingModule,
     HttpClientModule
   ],
