@@ -12,6 +12,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import {NgImageSliderModule} from "ng-image-slider";
 import {PheaderComponent} from "./shared/pheader/pheader.component";
+import { ProductsComponent } from './products/products.component';
+import { ItaComponent } from './ita/ita.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import {PheaderComponent} from "./shared/pheader/pheader.component";
     FooterComponent,
     SettingsComponent,
     PheaderComponent,
-    HomeComponent
+    HomeComponent,
+    ProductsComponent,
+    ItaComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -36,6 +36,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
     imports: [
@@ -69,7 +70,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
         MatExpansionModule,
         MatRadioModule,
         MatBadgeModule,
-        MatSidenavModule
+        MatSidenavModule,
+       FlexLayoutModule
         ],
     exports: [
         BrowserAnimationsModule,
@@ -99,7 +101,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
         MatExpansionModule,
         MatRadioModule,
         MatBadgeModule,
-        MatSidenavModule
+        MatSidenavModule,
+       FlexLayoutModule
         ],
     declarations: []
 })

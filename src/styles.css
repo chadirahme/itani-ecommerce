@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 
 html, body{
   height: 100%;
@@ -27,3 +28,68 @@ main {
   flex: 1 1 auto;
 }
 
+body {
+  /*font-family: mat-font-family($config);*/
+  font-weight: normal;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+
+/*
+ * NICIFY: Demo appearance
+ */
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+.mat-toolbar mat-icon{
+  cursor: pointer;
+  font-size: 1.6em;
+  transform: translateY(3px);
+}
+
+.mat-toolbar span{
+  margin-right: 2rem;
+}
+
+.mat-toolbar1 {
+  background: #f19f45;
+  color: white;
+}
+
+.mat-toolbar {
+  background: white;
+  color: #f19f45;
+}
+
+
+.mat-toolbar h1 { font-size: 1.2em; }
+
+mat-sidenav { width: 10vw; }
+mat-list-item { cursor: pointer; }
+
+footer {
+  width: 100%;
+  height: inherit;
+  background: #f2803c;
+  color: white;
+  padding: .5rem 0 1rem 0;
+/*> * { padding: 0 0 0 2rem; }*/
+/*h2 { font-size: 1.4em; }*/
+}
+
+.info { padding: 2vh 1.7vw; }
+/*.home {*/
+  /*margin: 1.7vw 0 0;*/
+/*button.color-font { color: #4d4daa; }*/
+/*}*/
+
+.info-card {
+  margin: 1vh 1.7vw;
+  color: #7b2f94;
+}

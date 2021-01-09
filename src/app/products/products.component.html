@@ -1,0 +1,63 @@
+<!--<div style="width: 100%; height: 500px; text-align:center;margin:0; padding:0;">-->
+  <!--<ng-image-slider #nav-->
+                   <!--[images]="imageObject"-->
+                   <!--[infinite]="true"-->
+                   <!--[autoSlide]="1"-->
+                   <!--[animationSpeed]="3"-->
+                   <!--[imageSize]="{width: '25%', height: 400}"-->
+                   <!--slideImage="1"></ng-image-slider>-->
+<!--</div>-->
+
+
+<div class="basic-container">
+
+  <mat-grid-list cols="3" [cols]="breakpoint" (window:resize)="onResize($event)" rowHeight="300px">
+    <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      >
+
+      <div class='crop'>
+      <img class="mat-card-img" [routerLink]="tile.routerLink"  [src]="tile.image">
+      </div>
+      <!--<mat-grid-tile-footer>-->
+        <!--{{tile.text}}-->
+      <!--</mat-grid-tile-footer>-->
+
+    </mat-grid-tile>
+
+
+  </mat-grid-list>
+
+</div>
+
+
+<!--<mat-grid-list cols="3" [cols]="breakpoint" (window:resize)="onResize($event)" rowHeight="170px" gutterSize="50px">-->
+  <!--<mat-grid-tile>-->
+    <!--<img src="assets/img/brands/grohelogo.jpeg" class="imgfluid">-->
+  <!--</mat-grid-tile>-->
+  <!--<mat-grid-tile>-->
+    <!--<img src="assets/img/brands/aqglogo.jpeg" class="imgfluid">-->
+  <!--</mat-grid-tile>-->
+
+  <!--<mat-grid-tile>-->
+    <!--<img src="assets/img/brands/pederlologo.jpeg" class="imgfluid">-->
+  <!--</mat-grid-tile>-->
+
+  <!--<mat-grid-tile>-->
+    <!--<img src="assets/img/brands/cotali-black.jpeg" class="imgfluid">-->
+  <!--</mat-grid-tile>-->
+
+
+
+  <!--<mat-grid-tile>-->
+    <!--<img src="assets/img/brands/ITAlogo.jpg" routerLink="/ita"  height="200px" width="80%" style="cursor: hand">-->
+  <!--</mat-grid-tile>-->
+
+  <!--<mat-grid-tile>-->
+    <!--<img src="assets/img/brands/vitralogo.jpg"  height="200px" width="80%">-->
+  <!--</mat-grid-tile>-->
+
+
+<!--</mat-grid-list>-->

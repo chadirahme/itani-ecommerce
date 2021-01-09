@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'itani-ecommerce';
+
+  routes = [
+    { path: '/', name: 'Home' },
+    { path: '/products', name: 'Products' },
+    { path: '/contact', name: 'Contact' },
+  ];
+
 }

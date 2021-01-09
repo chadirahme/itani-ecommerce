@@ -530,17 +530,142 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
+<mat-sidenav-container class="all-wrap">
 
-<div class="container">
-  <div class="header">
-    <app-pheader></app-pheader>
-  </div>
+  <mat-sidenav #sidenav over>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let route of routes"
+        [routerLink]="route.path"
+        (click)="sidenav.toggle()">
+        <mat-icon>code</mat-icon>&emsp;{{route.name}}
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
 
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
+  <mat-sidenav-content class="page-wrap img-bg">
 
-  <div class="footer">
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <span>
+          <mat-icon
+            (click)="sidenav.open()">menu
+          </mat-icon>
+        </span>
+        <!--<span><h1>ITANI</h1></span>-->
+        <a class="navbar-brand" href="#"><img src="../../../assets/img/ilogoNew.jpg" style="width: 354px; height: 100px;padding-top: 20px;"/>
+        </a>
+
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md>
+          <a mat-button [routerLink]="'/'"> Home </a>
+          <a mat-button [routerLink]="'/products'">Products </a>
+          <a mat-button [routerLink]="'/contact'">Contact </a>
+        </div>
+
+
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div style="padding: 10px">
+    </div>
+
+    <!--<div class="info" style="visibility:collapse">-->
+      <!--<mat-card class="home">-->
+        <!--<mat-card-title>Angular 7 and Material 2 Sticky Footer Example</mat-card-title>-->
+        <!--<mat-card-content>-->
+          <!--This demo was created with Material Version 7.1.1-->
+        <!--</mat-card-content>-->
+        <!--<mat-card-actions>-->
+          <!--<button class="color-font" mat-button>-->
+            <!--<a-->
+              <!--href="https://github.com/CanKattwinkel/material-2-sticky-footer-mat-sidenav/"-->
+              <!--target="_blank"-->
+            <!--&gt;Source code at GitHub-->
+            <!--</a>-->
+          <!--</button>-->
+          <!--<button class="color-font" mat-button>-->
+            <!--<a-->
+              <!--href="https://www.thecodecampus.de/blog/material-2-sticky-footer-mat-sidenav/"-->
+              <!--target="_blank"-->
+            <!--&gt;Our blog post-->
+            <!--</a>-->
+          <!--</button>-->
+        <!--</mat-card-actions>-->
+      <!--</mat-card>-->
+    <!--</div>-->
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+
+    <!--<footer>-->
+      <!--<h2>Sticky Footer !!</h2>-->
+      <!--<p>... with variable height</p>-->
+    <!--</footer>-->
     <app-footer></app-footer>
-  </div>
-</div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+<!--<div class="container">-->
+  <!--<div class="header">-->
+    <!--<app-pheader></app-pheader>-->
+  <!--</div>-->
+
+  <!--&lt;!&ndash;<div class="content">&ndash;&gt;-->
+    <!--&lt;!&ndash;<router-outlet></router-outlet>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+  <!--<div class="footer">-->
+    <!--<app-footer></app-footer>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+<!--<div class="container">-->
+<!--<mat-toolbar color="white">-->
+  <!--<mat-toolbar-row>-->
+    <!--<button mat-icon-button>-->
+      <!--<mat-icon (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>menu</mat-icon>-->
+    <!--</button>-->
+    <!--<a class="navbar-brand" href="#"><img src="../../../assets/img/ilogoNew.jpg" style="width: 354px; height: 100px;padding-top: 20px;"/>-->
+    <!--</a>-->
+    <!--<span class="menu-spacer"></span>-->
+    <!--<div fxShow="true" fxHide.lt-md>-->
+      <!--<a mat-button [routerLink]="'/'"> Home </a>-->
+      <!--<a mat-button [routerLink]="'/products'"> Create Products </a>-->
+    <!--</div>-->
+  <!--</mat-toolbar-row>-->
+
+  <!--<mat-toolbar-row>-->
+    <!--<span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>-->
+  <!--</mat-toolbar-row>-->
+<!--</mat-toolbar>-->
+
+<!--<mat-sidenav-container fxFlexFill>-->
+  <!--<mat-sidenav #sidenav>-->
+    <!--<mat-nav-list>-->
+
+      <!--<a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/'"> Home </a>-->
+      <!--<a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/products'"> products </a>-->
+      <!--&lt;!&ndash;<a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>&ndash;&gt;-->
+
+    <!--</mat-nav-list>-->
+  <!--</mat-sidenav>-->
+  <!--<mat-sidenav-content>-->
+    <!--<div style="height: 88vh;">-->
+
+      <!--<router-outlet></router-outlet>-->
+    <!--</div>-->
+  <!--</mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->
+
+
+<!--<div class="footer">-->
+<!--<app-footer></app-footer>-->
+<!--</div>-->
+<!--</div>-->

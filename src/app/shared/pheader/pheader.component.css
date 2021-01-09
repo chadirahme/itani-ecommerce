@@ -19,6 +19,13 @@ p {
   margin-inline-end: 0px;
 }
 
+.content{
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding: 3px 5px;
+  position: relative;
+  overflow-y: auto;
+}
 
 /*.mat-toolbar {*/
   /*position: fixed;*/
