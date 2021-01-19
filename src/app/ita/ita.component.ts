@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-ita',
@@ -8,11 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class ItaComponent implements OnInit {
 
   breakpoint: number;
-  constructor() {
+  category:string;
+  constructor(private route: ActivatedRoute) {
     this.breakpoint=4;
   }
 
   ngOnInit(): void {
+     this.route.params.subscribe(params => {
+      console.log(params);
+      this.category = params['name']; // (+) converts string 'id' to a number
+       console.log(this.category);
+       //this.title=this.category;
+      //this.loadProducts();
+    });
     this.breakpoint = (window.innerWidth <= 600) ? 1 : 2;
   }
 

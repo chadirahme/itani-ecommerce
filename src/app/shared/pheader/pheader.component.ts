@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTabChangeEvent} from "@angular/material/tabs";
 import {Router} from "@angular/router";
+import {BackendService} from "../../services/backend.service";
 
 @Component({
   selector: 'app-pheader',
@@ -9,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class PheaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private _backendService: BackendService ) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +24,10 @@ export class PheaderComponent implements OnInit {
     }
     else
       this.router.navigateByUrl('/');
+  }
+
+  logout(){
+    this._backendService.logout();
   }
 
 }

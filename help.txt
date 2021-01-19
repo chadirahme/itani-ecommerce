@@ -1,3 +1,8 @@
+1taniAdmin$
+admin@itaniformaterials.com
+
+https://elish-estore.firebaseapp.com/login
+
 Thank you for sharing anonymous usage data. Would you change your mind, the following
 command will disable this feature entirely:
 
@@ -15,3 +20,33 @@ https://jasonwatmore.com/post/2020/07/06/angular-10-communicating-between-compon
 
 
 one.itaniformaterials.com
+
+
+
+npm install firebase --save
+npm install angularfire2 firebase --save
+
+npm i @angular/fire --save
+
+
+enable friebase nosql database > Google Cloud Firestore API
+https://console.developers.google.com/apis/library/firestore.googleapis.com?project=itani-c4061
+https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=itani-c4061
+
+creare native SQL
+https://console.cloud.google.com/firestore/data?project=itani-c4061
+
+queries sample
+https://firebase.google.com/docs/firestore/query-data/queries
+
+https://indepth.dev/posts/1273/implement-file-upload-with-firebase-storage
+
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

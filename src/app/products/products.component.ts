@@ -39,17 +39,18 @@ export class ProductsComponent implements OnInit {
   ];
 
   tiles = [
-    {text: 'One', cols: 1, rows: 1, color: '#142A5C', image: '/assets/img/brands/aqglogo.jpeg', routerLink:'/'},
-    {text: 'Two', cols: 1, rows: 1, color: '#B7A0E8', image: '/assets/img/brands/grohelogo.jpeg',routerLink:'/'},
-    {text: 'Three', cols: 1, rows: 1, color: '#FF0000', image: '/assets/img/brands/cotalilogo.jpeg',routerLink:'/'},
-    {text: 'Four', cols: 1, rows: 1, color: '#D9EDD9', image: '/assets/img/brands/ITAlogo.jpg',routerLink:'/ita'},
-    {text: 'Four', cols: 1, rows: 1, color: '#D9EDD9', image: '/assets/img/brands/pederlologo.jpeg',routerLink:'/'},
-    {text: 'Four', cols: 1, rows: 1, color: '#D9EDD9', image: '/assets/img/brands/vitralogo.jpg',routerLink:'/'},
+    {text: 'One', cols: 1, rows: 1, color: '#142A5C', image: '/assets/img/brands/aqglogo.jpeg', routerLink:'/brands/AQG'},
+    {text: 'Two', cols: 1, rows: 1, color: '#B7A0E8', image: '/assets/img/brands/grohelogo.jpeg',routerLink:'/brands/Grohe'},
+    {text: 'Three', cols: 1, rows: 1, color: '#FF0000', image: '/assets/img/brands/cotalilogo.jpeg',routerLink:'/brands/Cotali'},
+    {text: 'Four', cols: 1, rows: 1, color: '#D9EDD9', image: '/assets/img/brands/ITAlogo.jpg',routerLink:'/brands/ITA'},
+    {text: 'Four', cols: 1, rows: 1, color: '#D9EDD9', image: '/assets/img/brands/pederlologo.jpeg',routerLink:"/brands/Pedrollo"},
+    {text: 'Four', cols: 1, rows: 1, color: '#D9EDD9', image: '/assets/img/brands/vitralogo.jpg',routerLink:"/brands/Vitra"},
   ];
 
   constructor() {
     this.breakpoint=3;
   }
+
 
   ngOnInit(): void {
     this.breakpoint = (window.innerWidth <= 600) ? 1 : 3;

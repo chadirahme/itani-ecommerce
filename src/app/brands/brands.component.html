@@ -1,0 +1,112 @@
+<!--<section id="inner-headline">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-lg-12">-->
+        <!--<h2 class="pageTitle">{{category}}</h2>-->
+
+      <!--</div>-->
+
+    <!--</div>-->
+
+  <!--</div>-->
+
+<!--</section>-->
+
+
+<nav class="product-filter">
+  <h1>{{category}}</h1>
+  <!--<div class="row">-->
+    <!--<div class="col-xs-6 col-md-4">-->
+      <!--<div class="input-group">-->
+        <!--<input type="text" class="form-control" placeholder="enter grocery items" id="txtSearch" />-->
+        <!--<div class="input-group-btn">-->
+          <!--<button class="btn btn-primary" type="button">-->
+            <!--<span class="glyphicon glyphicon-ok"></span>-->
+          <!--</button>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+
+  <div class="sort">
+    <div class="collection-sort">
+      <label>Filter by:</label>
+      <select>
+        <option value="/">All Brands</option>
+        <option value="/">AQG</option>
+        <option value="/">Grohe</option>
+        <option value="/">Cotali</option>
+        <option value="/">ITA</option>
+        <option value="/">Pedrollo</option>
+        <option value="/">Vitra</option>
+      </select>
+    </div>
+
+    <div class="collection-sort">
+      <label>Sort by:</label>
+      <select>
+        <option value="/">Featured</option>
+        <option value="/">Best Selling</option>
+        <option value="/">Alphabetically, A-Z</option>
+        <option value="/">Alphabetically, Z-A</option>
+        <option value="/">Price, low to high</option>
+        <option value="/">Price, high to low</option>
+        <option value="/">Date, new to old</option>
+        <option value="/">Date, old to new</option>
+      </select>
+    </div>
+  </div>
+</nav>
+
+<mat-progress-bar mode="indeterminate" *ngIf="dataLoading"></mat-progress-bar>
+
+<mat-grid-list cols="2"
+               gutterSize="6px"
+ *ngFor="let product of data">
+  <mat-grid-tile>
+  <app-item name="{{product.name}}" price="{{product.price}}" descr="{{product.descr}}" path="{{product.path | async}}"></app-item>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+  <!--<mat-grid-list [cols]="breakpoint"   rowHeight="300px" (window:resize)="onResize($event)"-->
+               <!--gutterSize="6px"-->
+               <!--responsive="true">-->
+  <!--<mat-grid-tile *ngFor="let product of data">-->
+
+
+<!--<app-item name="{{product.name}}" price="{{product.price}}" descr="{{product.descr}}" path="{{product.path | async}}"></app-item>-->
+    <!---->
+    <!--&lt;!&ndash;<img [src]="product.path | async" width="300" height="300"/>&ndash;&gt;-->
+
+  <!--</mat-grid-tile>-->
+
+<!--</mat-grid-list>-->
+
+
+<!--<mat-grid-list cols="2" [cols]="breakpoint"  (window:resize)="onResize($event)" >-->
+  <!--<mat-grid-tile>-->
+    <!--<img src="../../assets/images/ita/VT11801.jpg">-->
+  <!--</mat-grid-tile>-->
+  <!--<mat-grid-tile>-->
+    <!--<img src="../../assets/images/ita/VT11803.jpg" >-->
+  <!--</mat-grid-tile>-->
+
+  <!--<mat-grid-tile>-->
+    <!--<img src="../../assets/images/ita/VT11805.jpg" >-->
+  <!--</mat-grid-tile>-->
+
+  <!--<mat-grid-tile>-->
+    <!--<img src="../../assets/images/ita/VT11901.jpg" >-->
+  <!--</mat-grid-tile>-->
+
+  <!--<mat-grid-tile>-->
+    <!--<img src="../../assets/images/ita/VT11903.jpg" >-->
+  <!--</mat-grid-tile>-->
+
+<!--</mat-grid-list>-->
+
+
+
